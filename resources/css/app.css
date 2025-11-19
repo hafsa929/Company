@@ -1,11 +1,13 @@
-@import 'tailwindcss';
+/* tailwind base styles */
+@tailwind base;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* tailwind component styles */
+@tailwind components;
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* tailwind utility classes */
+@tailwind utilities;
+
+/* إضافة أي كود CSS مخصص */
+body {
+  font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
 }
