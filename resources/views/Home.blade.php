@@ -41,6 +41,8 @@
       <a href="#team" class="text-grayCustom-700 border border-transparent rounded-full px-3 py-1 transition-all duration-200 transform hover:scale-105 hover:bg-blue-400 hover:text-white">فريق العمل</a>
     </div>
   </header>
+  
+<div class="relative bg-white rounded-3xl m-2  ">
   <section id="about" class="max-w-6xl mx-auto p-10 grid md:grid-cols-2 gap-10 items-center">
   <div>
     <h3 class="text-3xl font-bold text-primary-600 mb-4">لمحة عن متجرنا</h3>
@@ -64,43 +66,7 @@
     </div>
   </div>
 </section>
-
-<style>
-/* STRONGER Morphing Blob */
-.blob {
-  animation: blobMorph 14s ease-in-out infinite;
-  border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
-}
-
-@keyframes blobMorph {
-  0% {
-    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
-  }
-  33% {
-    border-radius: 35% 65% 25% 75% / 70% 30% 80% 20%;
-  }
-  66% {
-    border-radius: 75% 25% 60% 40% / 35% 80% 25% 70%;
-  }
-  100% {
-    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
-  }
-}
-
-/* Image Fade Animation */
-@keyframes fade {
-  0%, 30% { opacity: 1; }
-  33%, 100% { opacity: 0; }
-}
-
-.animate-fade {
-  animation: fade 10s infinite;
-}
-
-.delay-0 { animation-delay: 0s; }
-.delay-3000 { animation-delay: 3s; }
-.delay-6000 { animation-delay: 6s; }
-</style>
+  </div>
 
   <section id="services" class="bg-white py-16">
     <div class="max-w-6xl mx-auto px-6">
@@ -152,5 +118,41 @@
 
 <script src="/js/menu.js" defer></script>
 
+<style>
+/* STRONGER Morphing Blob */
+.blob {
+  animation: blobMorph 14s ease-in-out infinite;
+  border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+}
+
+@keyframes blobMorph {
+  0% {
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+  }
+  33% {
+    border-radius: 35% 65% 25% 75% / 70% 30% 80% 20%;
+  }
+  66% {
+    border-radius: 75% 25% 60% 40% / 35% 80% 25% 70%;
+  }
+  100% {
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+  }
+}
+
+/* Image Fade Animation */
+@keyframes fade {
+  0%, 30% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+
+.animate-fade {
+  animation: fade 10s infinite;
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-3000 { animation-delay: 3s; }
+.delay-6000 { animation-delay: 6s; }
+</style>
 </body>
 </html>
