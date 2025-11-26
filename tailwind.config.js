@@ -27,11 +27,13 @@ export default {
           700: '#555555',
           500: '#888888',
           300: '#E5E5E5',
-          100: '#F3F3F3',
+          100: '#ffffff',
         },
       },
     },
   },
 
-  plugins: [],
+  plugins: [
+     require('@tailwindcss/line-clamp'),
+  ],
 }
