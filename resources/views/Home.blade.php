@@ -68,109 +68,168 @@
 </div>
 <section id="services" class="bg-white py-16">
   <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-primary-600 text-center mb-10">خدماتنا</h3>
+    <h3 class="text-3xl font-bold text-primary-600 text-center mb-12">
+      خدماتنا
+    </h3>
 
     <!-- Swiper -->
-    <div class="swiper mySwiper ">
+    <div class="swiper mySwiper">
       <div class="swiper-wrapper">
 
-        <!-- Slide 1 -->
-        <div class="swiper-slide p-4">
-          <div class="p-6 bg-grayCustom-100 shadow rounded-lg group relative overflow-hidden flex flex-col">
-            <!-- الصورة -->
-            <div class="w-full h-48 overflow-hidden rounded-lg mb-4">
-              <img src="/image/m1.jpg" alt="طباعة مخصصة"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        <!-- Slide 1: مستلزمات تخرج -->
+        <div class="swiper-slide">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-sm shadow-black/10 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+            <div class="w-full aspect-[3/4] overflow-hidden mb-4">
+              <img src="/image/m1.jpg" alt="مستلزمات تخرج" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
-            <!-- العنوان -->
-            <h4 class="text-xl font-bold text-primary-600 mb-2">الطباعة المخصصة</h4>
-            <!-- الوصف -->
-            <p class="text-grayCustom-600 line-clamp-3 flex-grow">
-              نطبع تصميمك الخاص على كل المنتجات بجودة عالية.
-            </p>
+            <div class="p-4 mb-2">
+              <a href="{{ route('gallery') }}?cat=graduation" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
+                مستلزمات تخرج
+              </a>
+              <p class="text-grayCustom-600 text-sm leading-relaxed">
+                شالات تخرج، بورد، كاتروات.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Slide 2: كل ما يخص طباعه -->
         <div class="swiper-slide p-4">
-          <div class="p-6 bg-grayCustom-100 shadow rounded-lg group relative overflow-hidden flex flex-col">
-            <div class="w-full h-48 overflow-hidden rounded-lg mb-4">
-              <img src="/image/m6.png" alt="تغليف الهدايا"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-sm shadow-black/10 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+            <div class="w-full aspect-[4/3] overflow-hidden mb-4">
+              <img src="/image/m6.png" alt="كل ما يخص طباعه" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
-            <h4 class="text-xl font-bold text-primary-600 mb-2">تغليف الهدايا</h4>
-            <p class="text-grayCustom-600 line-clamp-3 flex-grow">
-              تغليف أنيق وفريد يبرز شخصية هديتك ويجعلها أكثر تميزًا.
-            </p>
+            <div class="p-4 mb-2">
+              <a href="{{ route('gallery') }}?cat=printing" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
+                كل ما يخص طباعه
+              </a>
+              <p class="text-grayCustom-600 text-sm leading-relaxed">
+                مقات، ترامس، توت باق، استيكرات، كفرات.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!-- Slide 3: تغليف -->
         <div class="swiper-slide p-4">
-          <div class="p-6 bg-grayCustom-100 shadow rounded-lg group relative overflow-hidden flex flex-col">
-            <div class="w-full h-48 overflow-hidden rounded-lg mb-4">
-              <img src="/image/m7.png" alt="تنسيق الورود"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-sm shadow-black/10 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+            <div class="w-full aspect-[1/1] overflow-hidden mb-4">
+              <img src="/image/m7.png" alt="تغليف" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
-            <h4 class="text-xl font-bold text-primary-600 mb-2">تنسيق الورود</h4>
-            <p class="text-grayCustom-600 line-clamp-3 flex-grow">
-              تنسيق ورد جميل ومميز يعبّر عن روح المناسبة ويضيف لمسة راقية.
-            </p>
+            <div class="p-4 mb-2">
+              <a href="{{ route('gallery') }}?cat=packaging" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
+                تغليف
+              </a>
+              <p class="text-grayCustom-600 text-sm leading-relaxed">
+                تغليف أنيق يبرز جمال الهدية ويجعلها مميزة.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Slide 4 -->
+        <!-- Slide 4: تنسيق ورد -->
         <div class="swiper-slide p-4">
-          <div class="p-6 bg-grayCustom-100 shadow rounded-lg group relative overflow-hidden flex flex-col">
-            <div class="w-full h-48 overflow-hidden rounded-lg mb-4">
-              <img src="/image/m8.jpg" alt="بوكس الهدايا"
-                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="w-full aspect-[2/3] overflow-hidden mb-4">
+              <img src="/image/m8.jpg" alt="تنسيق ورد" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
-            <h4 class="text-xl font-bold text-primary-600 mb-2">بوكس الهدايا المخصص</h4>
-            <p class="text-grayCustom-600 line-clamp-3 flex-grow">
-              إنشاء بوكسات حسب الطلب للهدايا والمناسبات الخاصة.
-            </p>
+            <div class="p-4 mb-2">
+              <a href="{{ route('gallery') }}?cat=flowers" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
+                تنسيق ورد
+              </a>
+              <p class="text-grayCustom-600 text-sm leading-relaxed">
+                تنسيق ورد راقٍ يعكس روح المناسبة بذوق فخم.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5: هوديز وتيشرتات -->
+        <div class="swiper-slide p-4">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="w-full aspect-[3/4] overflow-hidden mb-4">
+              <img src="/image/m2.jpg" alt="هوديز وتيشرتات" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <div class="p-4 mb-2">
+              <a href="{{ route('gallery') }}?cat=clothes" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
+                هوديز وتيشرتات
+              </a>
+              <p class="text-grayCustom-600 text-sm leading-relaxed">
+                كل ما يخص الهوديز والتيشرتات بجودة عالية وتصاميم مميزة.
+              </p>
+            </div>
           </div>
         </div>
 
       </div>
 
       <!-- Pagination -->
-      <div class="swiper-pagination mt-6 lg:mt-12"></div>
+      <div class="swiper-pagination mt-10"></div>
 
-      <!-- Hidden Navigation (إن كنت لا تريد أزرار) -->
+      <!-- Navigation مخفية -->
       <div class="swiper-button-prev opacity-0 pointer-events-none"></div>
       <div class="swiper-button-next opacity-0 pointer-events-none"></div>
     </div>
   </div>
 </section>
 
+<section
+  id="vision"
+  class="relative min-h-screen flex items-center justify-center"
+>
+  <!-- Image -->
+  <img
+    src="/image/m7.png"
+    alt="Vision"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
 
+  <!-- طبقة لون الأثل بشفافية -->
+  <div class="absolute inset-0 bg-grayCustom-700/40 rounded-3xl"></div>
 
+  <!-- Overlay -->
+  <div class="absolute inset-0 text-white/90"></div>
 
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 max-w-4xl">
+    <h3
+      class="text-3xl md:text-6xl font-bold text-primary-600 mb-10
+             transition-all duration-700 hover:tracking-wider"
+    >
+      رؤيتنا
+    </h3>
 
-  <section id="vision" class="max-w-6xl mx-auto p-10 grid md:grid-cols-2 gap-10 items-center">
-    <div>
-      <h3 class="text-3xl font-bold text-primary-600 mb-4">رؤيتنا</h3>
-      <p class="text-grayCustom-700 leading-relaxed">أن نكون الخيار الأول للعملاء من خلال حلول مبتكرة ومهنية عالية.</p>
-    </div>
-    <div class="rounded-xl overflow-hidden shadow">
-      <img src="https://via.placeholder.com/600x400" alt="Vision Image" />
-    </div>
-  </section>
+<p class="text-xl md:text-2xl text-white leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+       أن نكون الخيار الأول للعملاء من خلال حلول مبتكرة
+      وتجربة عصرية تعكس احترافية خدماتنا.
+    </p>
+  </div>
+</section>
 
-  <section id="team" class="bg-grayCustom-100 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-primary-600 text-center mb-10">فريق العمل</h3>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="bg-white shadow p-4 rounded-lg text-center">
-          <img src="https://via.placeholder.com/150" class="rounded-full mx-auto mb-4" />
-          <h4 class="font-bold text-grayCustom-900">اسم الموظف</h4>
-          <p class="text-grayCustom-600 text-sm">الوظيفة</p>
-        </div>
+<!-- Popup -->
+<div id="popup" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full relative">
+    
+    <!-- زر الإغلاق -->
+    <button
+      onclick="closePopup()"
+      class="absolute top-3 left-3 text-gray-500 hover:text-black text-xl"
+    >
+      ✕
+    </button>
+
+    <h3 class="text-xl font-bold text-center mb-4">
+      بوكس الهدايا
+    </h3>
+
+    <!-- محتوى فارغ -->
+    <div id="popupContent">
+   <!-- المحتوى -->
+    <h3 class="text-xl font-bold mb-4">أهلا وسهلاااا</h3>
       </div>
-    </div>
-  </section> 
+
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="bg-primary-900 text-white text-center py-6 mt-10">
@@ -180,6 +239,7 @@
 <script src="/js/menu.js" defer></script>
 
 <style>
+
 /* STRONGER Morphing Blob */
 .blob {
   animation: blobMorph 14s ease-in-out infinite;
@@ -214,6 +274,7 @@
 .delay-0 { animation-delay: 0s; }
 .delay-3000 { animation-delay: 3s; }
 .delay-6000 { animation-delay: 6s; }
+
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -222,20 +283,41 @@
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
+
+    preventClicks: false,
+    preventClicksPropagation: false,
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
     breakpoints: {
       768: { slidesPerView: 2 },
       1024: { slidesPerView: 3 },
     },
   });
 </script>
+<script>
+function openPopup() {
+  const popup = document.getElementById("popup");
+  console.log("فتح البوب");
+  popup.classList.remove("hidden"); // يظهر
+}
+
+function closePopup() {
+  const popup = document.getElementById("popup");
+  console.log("إغلاق البوب");
+  popup.classList.add("hidden"); // يختفي
+}
+
+</script>
+
 
 </body>
 </html>
