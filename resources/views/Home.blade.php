@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>نبذة تعريفية عن الشركة</title>
+  <title>Hq_Gifts</title>
   <link rel="stylesheet" href="/css/app.css">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -77,10 +81,10 @@
       <div class="swiper-wrapper">
 
         <!-- Slide 1: مستلزمات تخرج -->
-        <div class="swiper-slide">
-          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-sm shadow-black/10 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+        <div class="swiper-slide p-4">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden">
             <div class="w-full aspect-[3/4] overflow-hidden mb-4">
-              <img src="/image/m1.jpg" alt="مستلزمات تخرج" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              <img src="/image/tp4.jpg" alt="مستلزمات تخرج" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div class="p-4 mb-2">
               <a href="{{ route('gallery') }}?cat=graduation" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
@@ -95,9 +99,9 @@
 
         <!-- Slide 2: كل ما يخص طباعه -->
         <div class="swiper-slide p-4">
-          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-sm shadow-black/10 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-            <div class="w-full aspect-[4/3] overflow-hidden mb-4">
-              <img src="/image/m6.png" alt="كل ما يخص طباعه" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden">
+            <div class="w-full aspect-[3/4] overflow-hidden mb-4">
+              <img src="/image/tp1.jpg" alt="كل ما يخص طباعه" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div class="p-4 mb-2">
               <a href="{{ route('gallery') }}?cat=printing" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
@@ -112,9 +116,9 @@
 
         <!-- Slide 3: تغليف -->
         <div class="swiper-slide p-4">
-          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-sm shadow-black/10 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-            <div class="w-full aspect-[1/1] overflow-hidden mb-4">
-              <img src="/image/m7.png" alt="تغليف" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden">
+            <div class="w-full aspect-[3/4] overflow-hidden mb-4">
+              <img src="/image/m8.jpg" alt="تغليف" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div class="p-4 mb-2">
               <a href="{{ route('gallery') }}?cat=packaging" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
@@ -129,9 +133,9 @@
 
         <!-- Slide 4: تنسيق ورد -->
         <div class="swiper-slide p-4">
-          <div class="bg-grayCustom-100 group flex flex-col h-full shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div class="w-full aspect-[2/3] overflow-hidden mb-4">
-              <img src="/image/m8.jpg" alt="تنسيق ورد" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden">
+            <div class="w-full aspect-[3/4] overflow-hidden mb-4">
+              <img src="/image/tp6.jpg" alt="تنسيق ورد" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div class="p-4 mb-2">
               <a href="{{ route('gallery') }}?cat=flowers" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
@@ -146,16 +150,33 @@
 
         <!-- Slide 5: هوديز وتيشرتات -->
         <div class="swiper-slide p-4">
-          <div class="bg-grayCustom-100 group flex flex-col h-full shadow hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden">
             <div class="w-full aspect-[3/4] overflow-hidden mb-4">
-              <img src="/image/m2.jpg" alt="هوديز وتيشرتات" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              <img src="/image/tp3.jpg" alt="هوديز وتيشرتات" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div class="p-4 mb-2">
               <a href="{{ route('gallery') }}?cat=clothes" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
                 هوديز وتيشرتات
               </a>
               <p class="text-grayCustom-600 text-sm leading-relaxed">
-                كل ما يخص الهوديز والتيشرتات بجودة عالية وتصاميم مميزة.
+                كل ما يخص الهوديز والتيشرتات بجودة عالية .
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6: كفرات الجوال -->
+        <div class="swiper-slide p-4">
+          <div class="bg-grayCustom-100 group flex flex-col h-full shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden">
+            <div class="w-full aspect-[3/4] overflow-hidden mb-4">
+              <img src="/image/tp2.jpg" alt="كفرات الجوال" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            </div>
+            <div class="p-4 mb-2">
+              <a href="{{ route('gallery') }}?cat=Phone_covers" class="text-xl font-bold text-primary-600 mb-2 text-right cursor-pointer hover:underline">
+                كفرات الجوال
+              </a>
+              <p class="text-grayCustom-600 text-sm leading-relaxed">
+                كفرات جوال بتصاميم عصرية وطباعة عالية الجودة.
               </p>
             </div>
           </div>
@@ -232,9 +253,36 @@
 </div>
 
   <!-- Footer -->
-  <footer class="bg-primary-900 text-white text-center py-6 mt-10">
-    <p>© 2025 اسم الشركة - جميع الحقوق محفوظة</p>
-  </footer>
+<footer class="bg-primary-900 text-white text-center py-8 mt-10">
+
+  <div class="flex justify-center gap-6 mb-4">
+    
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/Hq_Gifts" target="_blank"
+       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-primary-900 transition-all duration-300">
+      <i class="fab fa-facebook-f text-lg"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/Hq_Gifts" target="_blank"
+       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-primary-900 transition-all duration-300">
+      <i class="fab fa-instagram text-lg"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/218920495399" target="_blank"
+       class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-primary-900 transition-all duration-300">
+      <i class="fab fa-whatsapp text-lg"></i>
+    </a>
+
+  </div>
+
+  <p class="text-sm text-white/80">
+    © 2025 Hq_Gifts - جميع الحقوق محفوظة
+  </p>
+
+</footer>
+
 
 <script src="/js/menu.js" defer></script>
 

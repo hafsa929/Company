@@ -17,6 +17,8 @@ class GalleryController extends Controller
             'graduation' => env('GOOGLE_DRIVE_GRADUATION_FOLDER_ID'),
             'printing' => env('GOOGLE_DRIVE_PRINTING_FOLDER_ID'),
             'packaging' => env('GOOGLE_DRIVE_PACKAGING_FOLDER_ID'),
+            'Phone_covers' => env('GOOGLE_DRIVE_PHONE_COVERS_FOLDER_ID'),
+
             default => null,
         };
 
