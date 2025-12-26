@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 
 Route::get('/', function () {
-    return 'Laravel is working';
+    return view('Home');
 });
 
 Route::get('/Home', function () {
