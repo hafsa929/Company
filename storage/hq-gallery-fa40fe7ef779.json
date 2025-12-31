@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hq-gallery",
+  "private_key_id": "fa40fe7ef77979aa4a4b3fe3a5248f4f9d75aeb3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0pNYA+NeluUVw\nRI1T4VxbkkpgaiGBekj64uOV2261gcmcK/VNVqDixdvrqT1UgIK9esCrKHjuCZUX\nDtCGvU0EUuVmIiy9A2sFRYyLEE8HY7HAG+hGFXHr3P5bCH8/lI2R3SG8CbzXuGkP\nlycc5G8HLcNM8H/vLAXjh2f4yJ0d0D0cE8Wbz3zTHc87ELNoA8+sb2M9DfVe/jeC\nkKSQCiDOjCAoxK8afb7tNZy4YwYaUUKgREi32ZE0ZP1VYdkgvPOiLOmou0LxLzUa\n++eX5wK0OvW8jUrf9ZjqYI1FkSxAiM4I3Re2AbDJvf0tWF8kqged7tu2T81ApbPq\nrSi1WEp1AgMBAAECggEAHNuWWmpmXNGnn6M75pICZJiOrC9YMex8myPC0q5O1c0p\njXrSQawcoI2WL+QF6alr+WQSQmWBSBmcySWzN0snchDiF7pO5lUU9C8joBWXYmlR\nPIzYwtVrMRBJS/akCV6sbQhj+rudgOKzWeu+MlXlzMJJSFHFRkqEmFAJ0osN2nSk\nKeaEdluDf+LCDu+mtTjJTnTpv/i4aQasqG7OSyhzF1YM72AGqMqBRpqBfnHyOKZU\nEmoJRYDS4Wz8ZJIvjk4YgMiKh6/eKWaQKy8v5sm/4s8VkgeiWhybzaD1ajU7y18v\nMKwNZbyrUPUcSfpxthzEdLbIxey4IrKQdiRRCoh3YQKBgQDvqHm4hNLHBwwYbwJv\nu/56sp/FSJize8CVGNq1EnbLdQvzY7ywzgFFixKRNS+vEJj+mfi9JDcomwlcvpDT\nE5MPt7kCxsDAcYc2NYuM4YSDYELXhlZF5GP6jO3S2WpxxOjqmVKTGxk9EAAQv4vv\n9Y9e2ACu8E4FWWbSjZf0UI5KkQKBgQDA9jIC5Xj0Qx6dJGhnLejuJjj//3lxCYrv\nUvJgEX3oSWuH4SoHmFHtE0KZDdH+GpDkglye0cbba2EVo60jIyRq8U95FnecGwTD\nyi2vFah/x2hhR+Bgc5eiyPgmPUkSOewwdoQlhDooM9g6VKsgRq0mP7tmkqVQcfgT\nYycAUI4LpQKBgERCLfj6C7aYMT+8TmtYlhCIU60zEhr8wks0+wXbrm4gdjjqTVHm\nOsJ969nj1iL8jTbmz8u/Rt6P2cjKliEoUBiH8W/y/+9P5nzwH0EO8lkgz6jnICdj\n933jKdGGDyU8OkKnTLeNXlDf/8TFaav8usr+pqMs2mv3nKuXnJH/Z6ehAoGAWyZx\nLWkUn93s4jJGlybat1Sa7GLUDQ+C79Zw4+yfW1EDWKaGYhwT5zeH6CDdJ3mJJEho\nVCWoGBI7RCuTJ9v74gCnl/2C9tzUfWBOADzs4Z9isUFwvl8cLCte/UFJ+TAfYC07\n8zTo/ACxjaxdQdvhAwZsEeIH8V5E33OhAscKsnkCgYBCdeEKw+jmKNBSNDdBSJgH\nLj0As/jU2oU8gCHoMK+eqZJqmh1JdRh16rwUallIcZAu3kKup7Zp4YlX/+gVT5tf\nOBdAq4jXXDO6WoIhp15mjls6SLRfJYfXPae4WgSlpW2rZqYcQGVxEgvXDPiOGx36\n5W4eSgFadgZXQEiTcJzN0A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "hqgalleryservice@hq-gallery.iam.gserviceaccount.com",
+  "client_id": "107547965616183185488",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hqgalleryservice%40hq-gallery.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
