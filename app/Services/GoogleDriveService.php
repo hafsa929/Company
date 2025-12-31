@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use Google\Client;
@@ -8,27 +9,30 @@ class GoogleDriveService
 {
     protected $driveService;
 
-   public function __construct()
-{
-    $client = new Client();
+    public function __construct()
+    {
+        $client = new Client();
 
-    if (env('APP_ENV') === 'production') {
-        // على السيرفر: استخدم JSON من متغير البيئة
         $jsonCredentials = env('GOOGLE_DRIVE_CREDENTIALS_JSON');
-        if (!$jsonCredentials) {
-            throw new \Exception("GOOGLE_DRIVE_CREDENTIALS_JSON is not set.");
-        }
-        $tempFile = tempnam(sys_get_temp_dir(), 'gdrive');
-        file_put_contents($tempFile, $jsonCredentials);
-        $client->setAuthConfig($tempFile);
-    } else {
-        // على الجهاز المحلي: استخدم الملف JSON المخزن في storage
-        $client->setAuthConfig(storage_path(env('GOOGLE_DRIVE_CREDENTIALS')));
-    }
 
-    $client->addScope(Drive::DRIVE_READONLY);
-    $this->driveService = new Drive($client);
-}
+        if (!$jsonCredentials) {
+            // Local: استخدم الملف المخزن في storage إذا JSON غير موجود
+            $localFile = storage_path(env('GOOGLE_DRIVE_CREDENTIALS'));
+            if (!file_exists($localFile)) {
+                throw new \Exception("Google Drive credentials not found in local storage.");
+            }
+            $client->setAuthConfig($localFile);
+        } else {
+            // Production: أنشئ ملف مؤقت من JSON
+            $tempFile = tempnam(sys_get_temp_dir(), 'gdrive');
+            file_put_contents($tempFile, $jsonCredentials);
+            $client->setAuthConfig($tempFile);
+        }
+
+        $client->addScope(Drive::DRIVE_READONLY);
+
+        $this->driveService = new Drive($client);
+    }
 
     public function listFiles($folderId)
     {
@@ -60,4 +64,3 @@ class GoogleDriveService
         return collect($response->files);
     }
 }
-
