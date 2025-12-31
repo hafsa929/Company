@@ -8,27 +8,27 @@ class GoogleDriveService
 {
     protected $driveService;
 
-    public function __construct()
-    {
-        $client = new Client();
+   public function __construct()
+{
+    $client = new Client();
 
-        // قراءة JSON من متغير البيئة
+    if (env('APP_ENV') === 'production') {
+        // على السيرفر: استخدم JSON من متغير البيئة
         $jsonCredentials = env('GOOGLE_DRIVE_CREDENTIALS_JSON');
-
-        // التأكد أن المتغير موجود
         if (!$jsonCredentials) {
             throw new \Exception("GOOGLE_DRIVE_CREDENTIALS_JSON is not set.");
         }
-
-        // إنشاء ملف مؤقت من JSON
         $tempFile = tempnam(sys_get_temp_dir(), 'gdrive');
         file_put_contents($tempFile, $jsonCredentials);
-
         $client->setAuthConfig($tempFile);
-        $client->addScope(Drive::DRIVE_READONLY);
-
-        $this->driveService = new Drive($client);
+    } else {
+        // على الجهاز المحلي: استخدم الملف JSON المخزن في storage
+        $client->setAuthConfig(storage_path(env('GOOGLE_DRIVE_CREDENTIALS')));
     }
+
+    $client->addScope(Drive::DRIVE_READONLY);
+    $this->driveService = new Drive($client);
+}
 
     public function listFiles($folderId)
     {
