@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Services;
 
 use Google\Client;
@@ -12,15 +11,25 @@ class GoogleDriveService
     public function __construct()
     {
         $client = new Client();
-        $client->setAuthConfig(storage_path(env('GOOGLE_DRIVE_CREDENTIALS')));
+
+        // قراءة JSON من متغير البيئة
+        $jsonCredentials = env('GOOGLE_DRIVE_CREDENTIALS_JSON');
+
+        // التأكد أن المتغير موجود
+        if (!$jsonCredentials) {
+            throw new \Exception("GOOGLE_DRIVE_CREDENTIALS_JSON is not set.");
+        }
+
+        // إنشاء ملف مؤقت من JSON
+        $tempFile = tempnam(sys_get_temp_dir(), 'gdrive');
+        file_put_contents($tempFile, $jsonCredentials);
+
+        $client->setAuthConfig($tempFile);
         $client->addScope(Drive::DRIVE_READONLY);
 
         $this->driveService = new Drive($client);
     }
 
-    /**
-     * تجيب الصور داخل مجلد
-     */
     public function listFiles($folderId)
     {
         $query = "'$folderId' in parents and trashed = false and mimeType contains 'image/'";
@@ -39,9 +48,6 @@ class GoogleDriveService
         });
     }
 
-    /**
-     * تجيب المجلدات اللي داخل مجلد
-     */
     public function listSubFolders($parentFolderId)
     {
         $query = "'$parentFolderId' in parents and trashed = false and mimeType = 'application/vnd.google-apps.folder'";
@@ -54,3 +60,4 @@ class GoogleDriveService
         return collect($response->files);
     }
 }
+
