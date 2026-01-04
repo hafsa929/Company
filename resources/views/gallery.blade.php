@@ -20,16 +20,20 @@
         </h3>
 
         @if($group['images']->isNotEmpty())
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 @foreach($group['images'] as $file)
                     <div class="overflow-hidden rounded-xl shadow bg-white">
                         <img
                             src="{{ $file['directLink'] }}"
                             alt="{{ $file['name'] }}"
                             loading="lazy"
-                            class="w-full h-48 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
-                            onclick="openModal('{{ addslashes($file['directLink']) }}', '{{ addslashes($group['name']) }}')"
-                        >
+                            class="w-full h-72 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+                            onclick='openModal(
+                                    "{{ $file['directLink'] }}",
+                                    "{{ addslashes($group['name']) }}",
+                                    @json($group["images"]->pluck("directLink"))
+                                )'
+                            >
                     </div>
                 @endforeach
             </div>
@@ -51,18 +55,27 @@
         <span class="absolute top-4 right-4 text-gray-700 text-2xl font-bold cursor-pointer" onclick="closeModal()">&times;</span>
         <h3 id="modalCategory" class="text-xl font-bold text-gray-800 mb-4 text-center"></h3>
         <img id="modalImage" class="w-full max-h-[60vh] object-contain rounded-lg mb-4" src="" alt="">
+        <!-- أزرار التنقل -->
+        <div class="flex justify-between w-full mb-4">
+            <button onclick="prevImage()" class="bg-gray-200 px-4 py-2 rounded">
+                ⟵ السابق
+            </button>
+            <button onclick="nextImage()" class="bg-gray-200 px-4 py-2 rounded">
+                التالي ⟶
+            </button>
+        </div>
         <textarea id="userText" rows="4" placeholder="اكتب طلبك هنا..." class="w-full p-3 border border-gray-300 rounded-lg mb-4 resize-none"></textarea>
         <button id="modalWhatsapp" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg" onclick="sendWhatsapp()">اضغط هنا للحجز واتساب</button>
     </div>
 </div>
-
 <script>
-    let currentImgSrc = '';
-    let currentCategory = '';
+    let images = [];
+    let currentIndex = 0;
 
-    function openModal(imgSrc, category) {
-        currentImgSrc = imgSrc;
-        currentCategory = category;
+    function openModal(imgSrc, category, imgs) {
+        images = imgs;
+        currentIndex = images.indexOf(imgSrc);
+
         document.getElementById('modalImage').src = imgSrc;
         document.getElementById('modalCategory').textContent = category;
         document.getElementById('userText').value = '';
@@ -73,20 +86,30 @@
         document.getElementById('myModal').classList.add('hidden');
     }
 
-    function sendWhatsapp() {
-        let userText = document.getElementById('userText').value;
-        let message = userText + "\n" + currentImgSrc;
-        let whatsappUrl = "https://wa.me/+218920495399?text=" + encodeURIComponent(message);
-        window.open(whatsappUrl, "_blank");
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('modalImage').src = images[currentIndex];
     }
 
-    window.onclick = function(event) {
-        let modal = document.getElementById('myModal');
-        if (event.target === modal) {
-            closeModal();
-        }
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById('modalImage').src = images[currentIndex];
+    }
+
+    function sendWhatsapp() {
+        let text = document.getElementById('userText').value;
+        let msg = text + "\n" + images[currentIndex];
+        window.open(
+            "https://wa.me/+218920495399?text=" + encodeURIComponent(msg),
+            "_blank"
+        );
+    }
+
+    window.onclick = function(e) {
+        if (e.target.id === 'myModal') closeModal();
     }
 </script>
+
 
 </body>
 </html>
